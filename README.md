@@ -95,7 +95,7 @@ Handle sales transactions.
 
 ---
 
-## 💻 Cara Konsumsi API (Example Usage)
+## Cara Konsumsi API (Example Usage)
 
 Berikut adalah contoh cara menggunakan API ini menggunakan JavaScript (Fetch API).
 
