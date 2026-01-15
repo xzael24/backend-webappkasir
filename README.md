@@ -2,36 +2,21 @@
 
 This repository contains the backend API for the UAS Gabungan project. It uses **Node.js**, **Express**, and **MySQL** to manage data for Categories, Products, Customers, and Transactions.
 
-## Getting Started
+## 🌐 Public Live API
 
-### Prerequisites
-- [Node.js](https://nodejs.org/) installed
-- MySQL Database running
-- Database schema imported (tables: `product_categories`, `products`, `customers`, `orders`, `order_details`)
+API ini sudah dideploy dan bisa diakses secara publik (tanpa perlu setup lokal) di URL berikut:
 
-### Installation & Run
+> **Base URL:** `https://backend-webappkasir-production.up.railway.app/api`
 
-1. **Install Dependencies**
-   ```bash
-   npm install
-   ```
-
-2. **Configure Environment**
-   Make sure your database configuration in `config/database.js` or `.env` matches your local MySQL setup.
-
-3. **Start the Server**
-   ```bash
-   npm run dev
-   # or
-   node server.js
-   ```
-   The server runs on **http://localhost:3000** (default).
+Anda bisa langsung menggunakan URL di atas untuk project frontend Anda tanpa harus menjalankan backend ini di localhost.
 
 ---
 
-## API Endpoints
+## 🔗 API Endpoints
 
-The base URL for all API endpoints is: `http://localhost:3000/api`
+Semua endpoint di bawah ini bisa diakses dengan menggabungkan **Base URL** + **Endpoint Path**.
+
+Contoh: `https://backend-webappkasir-production.up.railway.app/api/products`
 
 ### 1. Categories (`/categories`)
 Manage product categories.
@@ -95,26 +80,31 @@ Handle sales transactions.
 
 ---
 
-## Cara Konsumsi API (Example Usage)
+## 💻 Cara Konsumsi API (Example Usage)
 
-Berikut adalah contoh cara menggunakan API ini menggunakan JavaScript (Fetch API).
+Berikut adalah contoh kode JavaScript untuk menggunakan API Publik ini.
 
 ### 1. Mengambil Data Produk (Get Products)
 ```javascript
+const API_URL = "https://backend-webappkasir-production.up.railway.app/api";
+
 async function getProducts() {
     try {
-        const response = await fetch('http://localhost:3000/api/products');
+        const response = await fetch(`${API_URL}/products`);
         const data = await response.json();
         console.log('Product List:', data);
     } catch (error) {
-        console.error('Error:', error);
+        console.error('Error fetching data:', error);
     }
 }
+
 getProducts();
 ```
 
 ### 2. Melakukan Transaksi Baru (Create Transaction)
 ```javascript
+const API_URL = "https://backend-webappkasir-production.up.railway.app/api";
+
 async function createTransaction() {
     const transactionData = {
         customer_id: "CUST-X",
@@ -126,7 +116,7 @@ async function createTransaction() {
     };
 
     try {
-        const response = await fetch('http://localhost:3000/api/penjualan', {
+        const response = await fetch(`${API_URL}/penjualan`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -136,8 +126,20 @@ async function createTransaction() {
         const result = await response.json();
         console.log('Transaction Created:', result);
     } catch (error) {
-        console.error('Error:', error);
+        console.error('Error creating transaction:', error);
     }
 }
+
 createTransaction();
 ```
+
+---
+
+## ⚙️ (Optional) Menjalankan di Localhost
+
+Jika Anda tetap ingin menjalankan backend ini di komputer sendiri:
+
+1. **Install Dependencies**: `npm install`
+2. **Setup Database**: Pastikan MySQL berjalan dan import schema database.
+3. **Configure .env**: Sesuaikan `DB_HOST`, `DB_USER`, dll.
+4. **Run Server**: `npm run dev`
