@@ -2,7 +2,7 @@
 
 This repository contains the backend API for the UAS Gabungan project. It uses **Node.js**, **Express**, and **MySQL** to manage data for Categories, Products, Customers, and Transactions.
 
-## 🌐 Public Live API
+## Public Live API
 
 API ini sudah dideploy dan bisa diakses secara publik (tanpa perlu setup lokal) di URL berikut:
 
@@ -12,7 +12,7 @@ Anda bisa langsung menggunakan URL di atas untuk project frontend Anda tanpa har
 
 ---
 
-## 🔗 API Endpoints
+## API Endpoints
 
 Semua endpoint di bawah ini bisa diakses dengan menggabungkan **Base URL** + **Endpoint Path**.
 
@@ -80,7 +80,7 @@ Handle sales transactions.
 
 ---
 
-## 💻 Cara Konsumsi API (Example Usage)
+## Cara Konsumsi API (Example Usage)
 
 Berikut adalah contoh kode JavaScript untuk menggunakan API Publik ini.
 
@@ -135,7 +135,7 @@ createTransaction();
 
 ---
 
-## ⚙️ (Optional) Menjalankan di Localhost
+## (Optional) Menjalankan di Localhost
 
 Jika Anda tetap ingin menjalankan backend ini di komputer sendiri:
 
