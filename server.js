@@ -7,6 +7,7 @@ import categoryRoutes from './routes/categoryRoutes.js';
 import productRoutes from './routes/productRoutes.js';
 import customerRoutes from './routes/customerRoutes.js';
 import transactionRoutes from './routes/transactionRoutes.js';
+import uasRoutes from './routes/uasRoutes.js';
 
 dotenv.config();
 
@@ -28,6 +29,7 @@ app.use('/api/categories', categoryRoutes);
 app.use('/api/products', productRoutes);
 app.use('/api/customers', customerRoutes);
 app.use('/api/penjualan', transactionRoutes);
+app.use('/api/uas', uasRoutes);
 
 // Start Server
 app.listen(port, () => {
