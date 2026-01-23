@@ -65,20 +65,17 @@ Handle sales transactions.
 
 ```json
 {
-  "customer_id": "CUST001",
+  "customer_id": "24090064",
+  "user_id": "12345678",
   "total_amount": 150000,
-  "user_id": "CASHIER01",
   "items": [
-    {
-      "product_id": 1,
+    { "product_id": 1,
       "quantity": 2,
       "price": 50000
     },
-    {
-      "product_id": 5,
+    { "product_id": 5,
       "quantity": 1,
-      "price": 50000
-    }
+      "price": 50000 }
   ]
 }
 ```
