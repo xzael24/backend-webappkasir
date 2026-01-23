@@ -69,11 +69,11 @@ Handle sales transactions.
   "user_id": "12345678",
   "total_amount": 150000,
   "items": [
-    { "product_id": 1,
+    { "product_id": 2151,
       "quantity": 2,
       "price": 50000
     },
-    { "product_id": 5,
+    { "product_id": 2187,
       "quantity": 1,
       "price": 50000 }
   ]
